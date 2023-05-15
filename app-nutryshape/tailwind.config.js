@@ -6,10 +6,22 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    gradientColorStops: {
+      primaryBlue: "#00B4D8",
+      white: "#FFFFFF",
+    },
     extend: {
       backgroundImage: {},
-      colors: {},
+      colors: {
+        primaryBlue: "#00B4D8",
+        secondaryBlue: "#55e0fc",
+        white: "#FFFFFF",
+        primaryGray: "#9E9E9E",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };
